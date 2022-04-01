@@ -13,3 +13,6 @@ Abby Rakowski - abigail.rakowski@temple.edu
 
 # Questions/Considerations
 - Team does not possess any knowledge of working with Discord. 
+- How to get usable data from Twitter
+- Should some of Kanye's verses be included?
+- We're well aware that this is ridiculous.
