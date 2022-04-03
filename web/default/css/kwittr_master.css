@@ -67,14 +67,18 @@ body {
 .page-container {
     width: var(--section-std-width);
     margin: 0 auto;
-    margin-top: -75px;
     background-color: rgb(var(--bg-std-page-content));
     color: rgb(--bg-std-body);
     border-radius: 1em;
     box-shadow: 0px 24px 38px 3px hsla(0,0%,0%,0.14);
+    position: relative;
+    z-index: 2;
 }
 .spacer {
     height: var(--section-double-padding);
+}
+.overlap {
+    margin-top: -75px;
 }
 .flex-display, header, .header-inside, .large-icon-inner, footer, .no-script-container {
     display: flex;
@@ -116,10 +120,16 @@ h2 {
 main p, main li, footer p, footer li {
     line-height: 250%;
 }
+a {
+    color: inherit;
+}
 .big-text {
     font-size: 4em;
     font-family: var(--font-accent);
     text-transform: lowercase;
+}
+.small-text {
+    font-size: 0.75em;
 }
 /*Image Styles*/
 .kanye-profile-mast {
@@ -146,6 +156,14 @@ header {
     background-color: rgb(var(--color-accent));
     box-shadow: 0px 24px 38px 3px hsla(0,0%,0%,0.14);
     z-index: 3;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+header.static {
+    background-color: rgba(var(--color-accent), 0.55);
+    box-shadow: none;
+}
+header.static:hover {
+    background-color: rgba(var(--color-accent), 1);
 }
 header.scrolled {
     position: fixed;
@@ -187,9 +205,18 @@ header.scrolled {
 .nav-menu-section li {
     display: inline-block;
     position: relative;
-    padding-left: 0.25em;
-    padding-right: 0.25em;
+    padding: 0.25em;
     z-index: 1;
+}
+.nav-menu-section li.highlighted {
+    background-color: rgb(var(--color-secondary-accent));
+    color: rgb(var(--color-accent));
+    border-radius: 0.5em;
+    transition: color 0.3s, background-color 0.3s, padding 0.3s;
+}
+.nav-menu-section li.highlighted:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 .nav-menu-section li:not(:last-child){
     margin-right: 1em;
@@ -203,7 +230,6 @@ header.scrolled {
     content: ' ';
     z-index: -1;
 }
-
 .nav-menu-section li:hover::after, .nav-menu-section li.selected:after {
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
@@ -315,7 +341,6 @@ header.scrolled {
 }
 /*footer*/
 footer {
-    margin-top: var(--section-std-padding);
     font-size: 0.9em;
     min-height: 95px;
 }
@@ -332,7 +357,7 @@ footer {
 }
 @media only screen and (max-width: 900px) {
     body {
-        font-size: 16px;
+        font-size: 14px;
     }
     /*Header and Nav*/
     .header-spacer {
@@ -346,6 +371,9 @@ footer {
         margin-top: -22px;
     }
     /*Page Content*/
+    .fixed-bg {
+        background-attachment: scroll;
+    }
     .accordion-toggle {
         text-align: center;
         width: 100%;

@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
             #homeHero {background-image: url(assets/images/ye_say_hero_gradient.png);}
+            #homeHero2 {background-image: url(assets/images/ye_say_gradient.png);}
         </style>
     </head>
     <body>
@@ -19,7 +20,6 @@
             </div>
         </noscript>
         <a href="#main" class="skip-to-main">Skip to Main Content</a>
-        <div class="header-spacer"></div>
         <header class="static">
             <div class="header-inside">
                 <div class="site-title-section">
@@ -32,14 +32,15 @@
                         <ul>
                             <li><a href="#about">About</a></li>
                             <li><a href="#faq">FAQs</a></li>
-                            <li><a href="https://github.com/mdm0/ye" rel="noopener noreferrer" target="_blank">Get Ye-Say</a></li>
+                            <li class="highlighted"><a href="https://github.com/mdm0/ye" rel="noopener noreferrer" target="_blank">Get Ye-Say</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
         <main>
-            <div class="hero-banner fixed-bg" id="homeHero" data-type="background" data-speed="6">
+            <div class="hero-banner" id="homeHero" data-type="background" data-speed="-4">
+                <div class="header-spacer"></div>
                 <div class="content-block">
                     <div class="grid-container two-columns flex-display">
                         <div>
@@ -53,13 +54,13 @@
                 </div>
                 <div class="spacer"></div>
             </div>
-            <div class="page-container">
+            <div class="page-container overlap">
                 <a id="main"></a>
                 <a id="about"></a>
                 <div class="content-block">
                     <h2 class="centered section-headline">Experience enlightenment. On demand.</h2>
                     <p class="centered">
-                        Ye-Say (pronounced YAY-SAY) is the world's most powerful Discord bot. Driven by @KanyeWest, one of the intellectual pioneers of our time, Ye-Say provides intelligent solutions to even the most complex questions<sup>1</sup>.
+                        Ye-Say (pronounced YAY-SAY) is the world's most powerful Discord bot. Driven by @KanyeWest, one of the intellectual pioneers of our time, Ye-Say provides intelligent solutions to even the most complex questions<sup><a href="#fine-print">1</a></sup>.
                     </p>
                     <div class="spacer"></div>
                     <div class="grid-container two-columns">
@@ -80,7 +81,7 @@
                                     <span class="material-icons">mark_chat_unread</span>
                                 </div>
                             </div>
-                            <h2>...to You<sup>2</sup></h2>
+                            <h2>...to You<sup><a href="#fine-print">2</a></sup></h2>
                             <p class="no-margin">
                                 The quick brown fox jumped over the lazy dog.
                             </p>
@@ -108,13 +109,19 @@
                     </div>
                 </div>
             </div>
+            <div class="hero-banner overlap" id="homeHero2">
+                <a id="fine-print"></a>
+                <div class="spacer"></div>
+                <div class="content-block">
+                    <ol class="small-text">
+                        <li>Ye-Say will likely provide an answer that is either irrelevant or further complicates your question.</li>
+                        <li>Well, you and the rest of the world.</li>
+                    </ol>
+                </div>
+            </div>
         </main>
         <footer>
             <div class="content-block">
-                <ol>
-                    <li>Ye-Say will likely provide an answer that is either irrelevant or further complicates your question.</li>
-                    <li>Well, you and the rest of the world.</li>
-                </ol>
                 <a href="index.html">
                     <img class="site-logo" src="assets/images/ye-se/ye_se_logo_chat_gradient.png" alt="Ye-Say: Enlightenment. On demand.">
                 </a>
