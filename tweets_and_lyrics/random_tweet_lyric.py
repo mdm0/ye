@@ -47,4 +47,8 @@ def tweet_or_lyric():
     return ye_response
 
 print(tweet_or_lyric())
+
+ye_says = tweet_or_lyric()
+ye_says
+
     

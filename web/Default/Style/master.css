@@ -33,8 +33,6 @@ body {
     width: var(--width-section-outer);
     margin: 0 auto;
     position: relative;
-    border-left: thin solid;
-    border-right: thin solid;
     min-height: 25vh;
 }
 .content-block {
@@ -127,8 +125,6 @@ header.color-change {
     width: var(--width-section-outer);
     margin: 0 auto;
     position: relative;
-    border-bottom: thin solid;
-    border-color: rgb(var(--color-text-light));
     transition: border-color 0.3s;
 }
 header.color-change .header-content {
@@ -179,6 +175,7 @@ header li {
 }
 .header-cta {
     height: var(--height-header);
+    border-bottom: thin solid;
     border-right: thin solid;
     border-left: thin solid;
     padding-left: 1em;
@@ -209,10 +206,9 @@ header li {
     color: inherit;
     position: absolute;
     top: 100%;
-    right: 0;
+    right: -1px;
     transition: max-height 0.3s ease-out, opacity 0.3s, background 0.3s;
-    border-left: thin solid;
-    border-bottom: thin solid;
+    border: thin solid;
     opacity: 0;
     background-color: rgb(var(--color-accent-primary));
     text-align: right;
@@ -231,6 +227,7 @@ header.color-change .header-nav-menu {
 }
 .nav-toggle-container {
     height: var(--height-header);
+    border-bottom: thin solid;
     border-right: thin solid;
     border-left: thin solid;
     padding-left: 1em;
