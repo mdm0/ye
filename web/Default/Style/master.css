@@ -293,6 +293,7 @@ main .content-container .big-text {
     text-decoration: none;
     border-top: thin solid;
     border-right: thin solid;
+    border-left: thin solid;
 }
 .scroll-down-button:hover {
     background-color: rgb(var(--color-accent-secondary));
@@ -455,8 +456,15 @@ main .content-container .big-text {
         --width-section-outer: 100%;
     }
     /*Header and Nav*/
+    header {
+        border-bottom: thin solid;
+    }
+    .nav-toggle-container {
+        border-bottom: none;
+    }
     .header-nav-menu {
         width: 100vh;
+        border-top: none;
     }
     .nav-toggle-container {
         border-right: none;
@@ -465,6 +473,9 @@ main .content-container .big-text {
         border-left: none;
     }
     /*Page Content*/
+    .scroll-down-button {
+        border-left: none;
+    }
     .content-container {
         border: none;
     }
