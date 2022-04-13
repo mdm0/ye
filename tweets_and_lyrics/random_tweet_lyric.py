@@ -18,19 +18,33 @@ def get_random_tweet():
         time = time[:2] + ":" + time[2:]
         full_date = month + day + year + time
         
-        tweet = tweet + "\n"  +  full_date + "\n"
+        # tweet = tweet + "\n"  +  full_date + "\n"
         
     return tweet
 
-def return_tweet():
-    load_tweet = True
-    while load_tweet == True:
-        print(get_random_tweet())
-        load_tweet = input("Another one? Y/N \n")
-        if load_tweet == "n" or load_tweet == "N":
-            load_tweet = False
-            return False
-        else:
-            load_tweet = True
+YeLyrics = open("Ye Lyrics.csv", "r")
+ReadLyrics = YeLyrics.readlines()
 
-return_tweet()
+def YeRandomLyrics():
+    RandomLyrics = random.choice(ReadLyrics[1:])
+    RandomLyrics = RandomLyrics.split(",")
+    
+    for lyric in RandomLyrics:
+        song = RandomLyrics[0]
+        date = str(RandomLyrics[1])
+        lyric = str(RandomLyrics[2])
+        
+        # lyric = lyric + "\n"  + song + "\n" + date + "\n"
+        
+    return lyric
+
+def tweet_or_lyric():
+    ye_response = random.randint(1, 2)
+    if ye_response == 1:
+        ye_response = get_random_tweet()
+    else:
+        ye_response = YeRandomLyrics()
+    return ye_response
+
+print(tweet_or_lyric())
+    

@@ -1,6 +1,6 @@
 import random
 
-YeLyrics = open("Ye_Lyrics.csv", "r")
+YeLyrics = open("Ye Lyrics.csv", "r")
 ReadLyrics = YeLyrics.readlines()
 
 def YeRandomLyrics():
