@@ -27,6 +27,7 @@ body {
     --color-text-light: 251, 251, 251;
     --color-accent-primary: 17, 0, 204;
     --color-accent-secondary: 66, 226, 184;
+    
 }
 .content-container {
     width: var(--width-section-outer);
@@ -43,7 +44,8 @@ body {
     padding-bottom: var(--padding-std);
 }
 .flex-display, 
-.header-content {
+.header-content,
+.icon-inner {
     display: flex;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -72,13 +74,35 @@ body {
 }
 .material-icons {
     vertical-align: bottom;
+    font-size: inherit;
+}
+.icon-lg {
+    height: 3em;
+    width: 3em;
+    font-size: 1.5em;
+    border-radius: 50%;
+    display: inline-block;
+    color: rgb(var(--color-accent-primary));
+    background-color: rgb(var(--color-accent-secondary));
+}
+.icon-inner {
+    height: 100%;
+    width: 100%;
+}
+.icon-inner span.material-icons {
+    display: block;
+    margin: 0 auto;
+    font-size: inherit;
 }
 /*Header and Nav*/
 .header-spacer {
     height: 75px;
 }
 header {
-    height: 75px;
+    /*Header Variable*/
+    --height-header: 75px;
+    
+    height: var(--height-header);
     width: 100%;
     margin: 0 auto;
     position: fixed;
@@ -87,13 +111,12 @@ header {
     background-color: rgb(var(--color-accent-primary));
     color: rgb(var(--color-text-light));
     transition: height 0.3s ease-in-out, background 0.3s, color 0.3s;
-    /*Header variables*/
-    --height-header: 75px;
 }
 header.scrolled {
-    height: 65px;
-    top: 0;
+    /*Header Variable*/
     --height-header: 65px;
+    
+    top: 0;
 }
 header.color-change {
     background-color: rgb(var(--color-text-light));
@@ -351,6 +374,9 @@ main .content-container .big-text {
 .accordion-inner {
     padding: 1em;
 }
+.spacer {
+    height: 65px;
+}
 /*Grid Layout*/
 .grid-container {
     display: grid;
@@ -387,6 +413,14 @@ main .content-container .big-text {
         text-align: center;
     }
     /*Header and Nav*/
+    header {
+        /*Header Variable*/
+        --height-header: 65px;
+    }
+    header.scrolled {
+        /*Header Variable*/
+        --height-header: 50px;
+    }
     .header-section.right {
         width: 33.33%;
     }
