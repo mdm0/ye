@@ -29,14 +29,15 @@ def YeRandomLyrics():
     RandomLyrics = random.choice(ReadLyrics[1:])
     RandomLyrics = RandomLyrics.split(",")
     
-    for lyric in RandomLyrics:
+    for lyric in  RandomLyrics:
         song = RandomLyrics[0]
         date = str(RandomLyrics[1])
         lyric = str(RandomLyrics[2])
         
+        return lyric
+        
         # lyric = lyric + "\n"  + song + "\n" + date + "\n"
         
-    return lyric
 
 def tweet_or_lyric():
     ye_response = random.randint(1, 2)

@@ -1,5 +1,6 @@
 /*Import Fonts from Google*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Montserrat:wght@100;400;700&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -21,7 +22,7 @@ body {
     --padding-std: 65px;
     /*Font*/
     --font-body: 'Montserrat', sans-serif;
-    --font-accent: 'Potta One', sans-serif;
+    --font-accent: 'Gruppo', sans-serif;
     /*Colors*/
     --color-text-dark: 48, 50, 61;
     --color-text-light: 251, 251, 251;
@@ -95,6 +96,11 @@ noscript {
 .big-text {
     font-size: 3em;
     font-family: var(--font-accent);
+    text-transform: lowercase;
+}
+h2 {
+    font-family: var(--font-accent);
+    font-size: 2.25em;
     text-transform: lowercase;
 }
 .material-icons {
