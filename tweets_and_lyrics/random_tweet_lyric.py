@@ -46,9 +46,15 @@ def tweet_or_lyric():
         ye_response = YeRandomLyrics()
     return ye_response
 
-print(tweet_or_lyric())
+def ye_says():
+    get_response = True
+    while get_response == True:
+        print(tweet_or_lyric())
+        get_response = input("Another One? Y/N")
+        if get_response == "n" or get_response == "N":
+            get_response = False
+            return False
+        else:
+            get_response = True
 
-ye_says = tweet_or_lyric()
-ye_says
-
-    
+ye_says()
