@@ -41,7 +41,8 @@ body {
     padding-top: var(--padding-std);
     padding-bottom: var(--padding-std);
 }
-.flex-display, 
+.flex-display,
+noscript,
 .header-content,
 .icon-inner {
     display: flex;
@@ -54,6 +55,32 @@ body {
 }
 .no-margin {
     margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+/*Accessibility Features*/
+.skip-to-main {
+    color: rgb(var(--color-text-light));
+    background-color: rgb(var(--color-text-dark));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+.skip-to-main:focus {
+    opacity: 1;
+    z-index: 4;
+}
+noscript {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    z-index: 4;
+    background-color: rgba(var(--color-text-dark), 0.85);
+    color: rgb(var(--color-text-light));
 }
 /*Text Elements*/
 .center {
@@ -91,6 +118,9 @@ body {
     display: block;
     margin: 0 auto;
     font-size: inherit;
+}
+main a {
+    color: rgb(var(--color-accent-primary));
 }
 /*Header and Nav*/
 .header-spacer {
