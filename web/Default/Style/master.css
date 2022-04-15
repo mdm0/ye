@@ -216,6 +216,13 @@ header a:hover {
     font-family: var(--font-accent);
     font-size: 1.75em;
 }
+.site-title sup {
+    border-radius: 0.25em;
+    border: thin solid;
+    padding: 0.25em;
+    font-size: 0.5em;
+    margin: 0.125em;
+}
 header ul {
     list-style-type: none;
     padding-left: 0;
@@ -444,6 +451,7 @@ main .content-container .big-text {
     width: var(--width-section-outer);
     margin: 0 auto;
     font-size: 0.85em;
+    color: rgb(var(--color-accent-primary));
 }
 .img-main {
     display: inline-block;

@@ -57,3 +57,15 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
+
+function parallax() {
+	var primaryHero = document.getElementById("parallaxObject");
+	var yPos = window.pageYOffset / primaryHero.dataset.speed;
+	yPos = -yPos;
+	var coords = '0% '+ yPos + 'px';
+	primaryHero.style.backgroundPosition = coords;
+}
+window.addEventListener("scroll", function(){
+	parallax();	
+}); 
+
