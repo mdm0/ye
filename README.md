@@ -1,6 +1,9 @@
 # Ye-Say
 Experience enlightenment. On demand.
 
+# Website
+GitHub Pages via [Netlify](https://yesay.netlify.app/)
+
 # DialoGPT Model for Ye
 [Hosted on HuggingFace](https://huggingface.co/mdm/DialoGPT-small-Kanye?text=pete+texting+kim)
 
