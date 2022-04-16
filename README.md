@@ -7,4 +7,5 @@ Experience enlightenment. On demand.
 Createed with the following resources:  
 [Buit using tutorial by Lynn Zheng](https://www.freecodecamp.org/news/discord-ai-chatbot/#:~:text=How%20to%20Build%20the%20Discord,API%20token%20for%20later%20use.)  
 [Zheng's GitHub Repo](https://github.com/RuolinZheng08/twewy-discord-chatbot/blob/main/model_train_upload_workflow.ipynb)  
-[Microsoft DialoGPT Model](https://huggingface.co/microsoft/DialoGPT-small)
+[Microsoft DialoGPT Model](https://huggingface.co/microsoft/DialoGPT-small)  
+[Kanye West Dataset on Kaggle](https://www.kaggle.com/datasets/convolutionalnn/kanye-west-lyrics-dataset)
