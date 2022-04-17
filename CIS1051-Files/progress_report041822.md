@@ -1,4 +1,5 @@
 # 04/18/22 Progress Report on Ye Say
+### Section Leader: Dr. Andrew Rosen
 Michael's take: 
 ## The Good
 I combined my work with Abby's and followed a [tutorial](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/) to turn our datasets into a chat bot that delivers a random Kanye tweet or lyric. Ye Say's [website](https://yesay.netlify.app) also looks fantastic. It runs off of Netlify and GitHub Pages.  
@@ -7,5 +8,5 @@ A couple of people asked me if I'd consider adding AI to Ye Say, rather than the
 ## The Bad
 Not enough RAM allocated on Colab to work with my entire dataset, so I used the first 800 verses on the spreadsheet to make my model. I thought that my program did a good enough job of filtering Kanye's lyrical genius, but after running the bot, it has become apparent that I still need to weed out some *choice* words.  
 Oh yeah, the Ye AI is kind of mean. 
-## The Future
+## What Still Needs to be Done
 Exploring hosting the bot on [repl.it](https://repl.it) and using a tool to run it continuously so that Ye Say can be used at any time.
