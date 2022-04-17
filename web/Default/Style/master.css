@@ -167,7 +167,7 @@ header.scrolled {
     top: 0;
 }
 header.color-change {
-    background-color: rgb(var(--color-text-light));
+    background-color: rgba(var(--color-text-light));
     color: rgb(var(--color-accent-primary));
 }
 .header-content {
