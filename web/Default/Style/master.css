@@ -156,7 +156,9 @@ header {
     position: fixed;
     top: 0;
     z-index: 3;
-    background-color: rgb(var(--color-accent-primary));
+    background-color: rgba(var(--color-accent-primary), 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     color: rgb(var(--color-text-light));
     transition: height 0.3s ease-in-out, background 0.3s, color 0.3s;
 }
@@ -167,7 +169,7 @@ header.scrolled {
     top: 0;
 }
 header.color-change {
-    background-color: rgba(var(--color-text-light));
+    background-color: rgba(var(--color-text-light), 0.8);
     color: rgb(var(--color-accent-primary));
 }
 .header-content {
