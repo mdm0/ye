@@ -95,7 +95,7 @@ noscript {
     line-height: 225%;
 }
 .big-text {
-    font-size: 3em;
+    font-size: 3.25em;
     font-family: var(--font-accent);
     text-transform: lowercase;
     line-height: 102.5%;
@@ -112,6 +112,9 @@ h2 {
 }
 h3 {
     font-size: 1.5em;
+}
+h1, h2, h3, .big-text {
+    font-weight: 400;
 }
 main h2, 
 main h3,
@@ -415,11 +418,11 @@ main .content-container {
     margin-bottom: 1em;
 }
 .accordion-toggle {
-    font-size:inherit;
-    font-weight: 700;
+    font-size: 1.25em;
+    font-family: var(--font-accent);
+    text-align: left;
     color: rgb(var(--color-accent-primary));
     border: none;
-    font-family: inherit;
     background-color: transparent;
     cursor: pointer;
     padding: 1em;
