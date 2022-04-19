@@ -24,7 +24,7 @@ body {
     --font-body: 'Montserrat', sans-serif;
     --font-accent: 'Gruppo', sans-serif;
     /*Colors*/
-    --color-text-dark: 48, 50, 61;
+    --color-text-dark: 38, 40, 51;
     --color-text-light: 251, 251, 251;
     --color-accent-primary: 17, 0, 204;
     --color-accent-secondary: 66, 226, 184;
@@ -98,11 +98,27 @@ noscript {
     font-size: 3em;
     font-family: var(--font-accent);
     text-transform: lowercase;
+    line-height: 102.5%;
+}
+.big-text sup {
+    border-radius: 0.25em;
+    border: thin solid;
+    padding: 0.25em;
+    font-size: 0.5em;
+    margin: 0.125em;
 }
 h2 {
-    font-family: var(--font-accent);
     font-size: 2.25em;
+}
+h3 {
+    font-size: 1.5em;
+}
+main h2, 
+main h3,
+main .big-text {
+    font-family: var(--font-accent);
     text-transform: lowercase;
+    color: rgb(var(--color-accent-primary));
 }
 .material-icons {
     vertical-align: bottom;
@@ -115,7 +131,8 @@ h2 {
     border-radius: 50%;
     display: inline-block;
     color: rgb(var(--color-accent-primary));
-    background-color: rgb(var(--color-accent-secondary));
+    background-color: rgb(var(--color-text-light));
+    border: thin solid rgb(var(--color-accent-primary));
 }
 .icon-inner {
     height: 100%;
@@ -169,7 +186,7 @@ header.scrolled {
     top: 0;
 }
 header.color-change {
-    background-color: rgba(var(--color-text-light), 0.8);
+    background-color: rgba(var(--color-text-light), 0.7);
     color: rgb(var(--color-accent-primary));
 }
 .header-content {
@@ -208,9 +225,6 @@ header a {
     color: inherit;
     text-decoration: none;
 }
-header a:hover {
-    color: rgb(var(--color-accent-secondary));
-}
 .site-title {
     color: inherit;
     text-decoration: none;
@@ -222,6 +236,7 @@ header a:hover {
     border-radius: 0.25em;
     border: thin solid;
     padding: 0.25em;
+    margin: 0.25em;
     font-size: 0.5em;
     margin: 0.125em;
 }
@@ -246,16 +261,20 @@ header li {
 }
 .header-cta:hover {
     background-color: rgb(var(--color-accent-secondary));
-    color: rgb(var(--color-accent-primary));
 }
 .header-cta:not(:first-child) {
     border-left: none;
 }
-.header-cta a:hover {
-    color: inherit;
-}
 .header-cta .material-icons {
     vertical-align: middle;
+}
+.header-cta a,
+.header-nav-menu a {
+    color: rgb(var(--color-text-light));
+}
+header.color-change .header-cta a,
+header.color-change .header-nav-menu a {
+    color: rgb(var(--color-accent-primary));
 }
 .header-nav-menu {
     max-height: 0;
@@ -274,6 +293,9 @@ header li {
 }
 header.color-change .header-nav-menu {
     background-color: rgb(var(--color-text-light));
+}
+.header-nav-menu a:hover {
+    text-decoration: underline;
 }
 .header-nav-inner {
     padding: 1em;
@@ -319,14 +341,10 @@ header.color-change .header-nav-menu {
 main .content-container {
     border-color: rgb(var(--color-accent-primary));
 }
-main .content-container .big-text {
-    color: rgb(var(--color-accent-primary));
-}
 .mast-head {
     min-height: 100vh;
     position: relative;
     margin-top: -75px;
-    background-color: rgb(var(--color-accent-primary));
     background: rgb(var(--color-accent-primary));
     background: linear-gradient(180deg, rgba(var(--color-accent-primary), 1) 30%, rgba(var(--color-accent-secondary),1) 100%);
     background-attachment: fixed;
@@ -369,7 +387,7 @@ main .content-container .big-text {
 .hero-banner-overlay {
     min-height: inherit;
     position: relative;
-    background-color: rgba(var(--color-accent-primary), 0.55);
+    background-color: rgba(var(--color-accent-primary), 0.65);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
