@@ -335,7 +335,7 @@ header.color-change .header-nav-menu {
     z-index: 1;
 }
 .nav-toggle:before {
-    content: '☰';
+    content: 'v';
 }
 .nav-toggle.active:before {
     content: 'x';
