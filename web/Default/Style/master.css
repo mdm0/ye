@@ -127,7 +127,8 @@ main .big-text {
     text-transform: lowercase;
     color: rgb(var(--color-accent-primary));
 }
-.material-icons {
+.material-icons,
+.material-symbols-outlined {
     vertical-align: bottom;
     font-size: inherit;
 }
@@ -138,14 +139,13 @@ main .big-text {
     border-radius: 50%;
     display: inline-block;
     color: rgb(var(--color-accent-primary));
-    background-color: rgb(var(--color-text-light));
-    border: thin solid rgb(var(--color-accent-primary));
+    background-color: rgba(var(--color-accent-primary), 0.125);
 }
 .icon-inner {
     height: 100%;
     width: 100%;
 }
-.icon-inner span.material-icons {
+.icon-inner span.icon {
     display: block;
     margin: 0 auto;
     font-size: inherit;
@@ -159,12 +159,14 @@ main a {
     font-size: 1.25em;
     text-transform: lowercase;
     padding: 0.75em;
-    border: thin solid rgb(var(--color-accent-primary));
     display: inline-block;
     margin: 0.5em;
+    background-color: rgba(var(--color-accent-primary), 0.125);
+    transition: background 0.3s;
+    border-radius: 0.5em;
 }
 .cta-body:hover {
-    background-color: rgb(var(--color-accent-secondary));
+    background-color: rgba(var(--color-accent-secondary), 0.125);
 }
 /*Header and Nav*/
 .header-spacer {
@@ -253,17 +255,15 @@ header li {
 }
 .header-cta {
     height: var(--height-header);
-    border-right: thin solid;
-    border-left: thin solid;
     padding-left: 1em;
     padding-right: 1em;
     cursor: pointer;
-    transition: height 0.3s;
+    transition: height 0.3s, background 0.3s;
     display: table-cell;
     vertical-align: middle;
 }
 .header-cta:hover {
-    background-color: rgb(var(--color-accent-secondary));
+    background-color: rgba(var(--color-accent-secondary), 0.125);
 }
 .header-cta:not(:first-child) {
     border-left: none;
@@ -275,7 +275,7 @@ header li {
 .header-nav-menu a {
     color: rgb(var(--color-text-light));
 }
-header.color-change .header-cta a,
+header.color-change .header-cta a, 
 header.color-change .header-nav-menu a {
     color: rgb(var(--color-accent-primary));
 }
@@ -286,12 +286,13 @@ header.color-change .header-nav-menu a {
     background-color: inherit;
     color: inherit;
     position: absolute;
-    top: 100%;
-    right: -1px;
+    top: 120%;
+    right: 7.5%;
     transition: max-height 0.3s ease-out, opacity 0.3s, background 0.3s;
-    border: thin solid;
     opacity: 0;
     background-color: rgb(var(--color-accent-primary));
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 0.5em;
     text-align: right;
 }
 header.color-change .header-nav-menu {
@@ -313,8 +314,6 @@ header.color-change .header-nav-menu {
 .nav-toggle-container {
     height: var(--height-header);
     width: 72px;
-    border-right: thin solid;
-    border-left: thin solid;
     cursor: pointer;
     transition: height 0.3s;
     display: inline-table;
@@ -328,22 +327,27 @@ header.color-change .header-nav-menu {
     font-size: inherit;
     color: inherit;
     font-family: inherit;
-    background: transparent;
     border: none;
-    transition: line-height 0.3s;
+    transition: line-height 0.3s, background 0.3s;
+    background-color: transparent;
     cursor: pointer;
     z-index: 1;
 }
-.nav-toggle:before {
-    content: 'v';
-}
-.nav-toggle.active:before {
-    content: 'x';
-}
 .nav-toggle:hover,
 .nav-toggle.active {
-    background-color: rgb(var(--color-accent-secondary));
-    color: rgb(var(--color-accent-primary));
+    background-color: rgba(var(--color-accent-secondary), 0.125);
+}
+span.open-nav {
+    display: block;
+}
+span.close-nav {
+    display: none;
+}
+.nav-toggle.active .open-nav {
+    display: none;
+}
+.nav-toggle.active .close-nav {
+    display: block;
 }
 /*Page Content*/
 main .content-container {
@@ -419,49 +423,45 @@ main .content-container {
 }
 .accordion {
     position: relative;
-    margin-bottom: 1em;
 }
 .accordion-toggle {
     font-size: 1.25em;
+    padding: 1em;
     font-family: var(--font-accent);
     text-align: left;
     color: rgb(var(--color-accent-primary));
     border: none;
     background-color: transparent;
     cursor: pointer;
-    padding: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
     width: 100%;
     position: relative;
-    transition: border 0.3s;
 }
 .accordion-toggle:after {
     font-family: var(--font-body);
     width: 0.85em;
     height: 0.85em;
-    margin-left: 1em;
-    border: thin solid rgb(var(--color-accent-primary));
-    border-radius: 50%;
+    background-color: rgba(var(--color-accent-primary), 0.125);
     content: '+';
     position: absolute;
     right: 0;
     top: 0;
-    margin: 0;
+    border-radius: 0.25em;
+    bottom: -100%;
     padding: 1em;
-    transition: border-radius 0.3s;
-}
-.accordion-toggle.active {
-    border-bottom: thin solid;
+    transition: background 0.3s;
 }
 .accordion-toggle.active:after {
     content: '-';
-    border-radius: 0;
-    border-bottom: none;
+    background-color: rgba(var(--color-accent-secondary), 0.25);
 }
 .accordion-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    margin-top: -2px;
+    margin-bottom: 1em;
+    border-bottom: thin solid rgba(var(--color-accent-primary), 0.125);
 }
 .accordion-inner {
     padding: 1em;
@@ -559,6 +559,9 @@ footer menu {
     .header-cta:not(:first-child) {
         display: none;
     }
+    .header-nav-menu {
+        right: 2.5%;
+    }
     /*Page Content*/
     .mast-head {
         background-attachment: scroll;
@@ -591,24 +594,35 @@ footer menu {
         --width-section-outer: 100%;
     }
     /*Header and Nav*/
-    header {
-        border-bottom: thin solid;
-    }
-    header.color-change {
-        box-shadow: none;
-    }
     .nav-toggle-container {
         border-bottom: none;
     }
     .header-nav-menu {
         width: 100vh;
-        border-top: none;
+        border-top: thin solid rgba(var(--color-accent-primary), 0.125);
+        top: 100%;
+        border-radius: 0;
+        padding: 0;
     }
     .nav-toggle-container {
         border-right: none;
     }
     .header-cta:first-child {
         border-left: none;
+    }
+    .header-nav-inner li {
+        width: 100%;
+        padding: 0.25em;
+        margin-right: 1em;
+        margin-left: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .header-nav-inner li:not(:last-child) {
+        border-bottom: thin solid rgba(var(--color-text-light), 0.125);
+    }
+    header.color-change .header-nav-inner li {
+        border-color: rgba(var(--color-accent-primary), 0.125);
     }
     /*Page Content*/
     .scroll-down-button {

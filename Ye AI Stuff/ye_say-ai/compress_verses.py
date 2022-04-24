@@ -2,6 +2,8 @@ import csv
 import random
 import re
 
+redact_words = ['slave', 'nigga']
+
 verses = open("Kanye West Lyrics.txt", "r")
 
 def remove_brackets(file, output):
@@ -21,11 +23,13 @@ def compress_file(file, output):
     read_lines = file.readlines()
     write_file = open(output, "w")
     all_lines = []
+    count = 0 
     for lines in read_lines:
         if lines not in all_lines:
             if "(" not in lines and ")" not in lines:
-                all_lines.append(lines)
-        else:
+                    all_lines.append(lines)
+                    count += 1
+        if count >= 1:
             pass
     for lines in all_lines:
         lines=str(lines)
