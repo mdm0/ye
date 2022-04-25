@@ -532,8 +532,9 @@ footer menu {
 .yt-embed {
     display: block;
     margin: 0 auto;
-    width: 65%;
-    height: 350px;
+    width: var( --width-section-inner);
+    height: 25em;
+    border-radius: 0.5em;
 }
 @media only screen and (max-width: 1024px) {
     body {
