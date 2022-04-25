@@ -168,6 +168,12 @@ main a {
 .cta-body:hover {
     background-color: rgba(var(--color-accent-secondary), 0.125);
 }
+hr {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: thin solid rgba(var(--color-text-dark), 0.125);
+}
 /*Header and Nav*/
 .header-spacer {
     height: 75px;
@@ -386,14 +392,13 @@ main .content-container {
     padding: 1em;
     color: inherit;
     text-decoration: none;
-    border-top: thin solid;
-    border-right: thin solid;
-    border-left: thin solid;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    transition: background 0.3s, color 0.3s;
 }
 .scroll-down-button:hover {
-    background-color: rgb(var(--color-accent-secondary));
+    background-color: rgb(var(--color-text-light));
     color: rgb(var(--color-accent-primary));
-    border-color: rgb(var(--color-text-light));
 }
 .hero-banner {
     min-height: 50vh;

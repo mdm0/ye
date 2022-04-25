@@ -75,11 +75,16 @@
             <div class="content-container">
                 <div class="content-block center">
                     <h1 class="big-text">Ye's Brain</h1>
-                    <p>Explore the inner workings of Ye Say and the resources that we used in its development.</p>
+                    <p>
+                        Explore the inner workings of Ye Say and the resources that we used in its development. Yes, we went through Kanye West's entire Twitter to make this.
+                    </p>
+                    <hr>
                     <img class="img-main" src="Assets/Images/ye_say/iPhone_mockup/ye_say_mockup-banner_iphonesewhite_portrait.png" alt="Ye Say on the iPhone">
                 </div>
                 <div class="content-block">
                     <p>
+                        <strong>Michael's Take:</strong>
+                        <br>
                         Allan Hamilton famously wrote that no one accomplishes anything alone. This especially rang true when Abby and I created Ye Say. Neither of us have worked with Discord's API or have experience in AI development. What started as a joke may have evolved into our computer science professor's biggest "shaking my head" moment of 2022.
                     </p>
                     <p>
@@ -96,15 +101,17 @@
                     <p>
                         Ye Say 2.0 came to be when somebody suggested that we explore using artificial intelligence to give Ye Say the power to generate "real" responses to user input. The dataset used here was found on <a href="https://www.kaggle.com/datasets/convolutionalnn/kanye-west-lyrics-dataset" rel="noreferrer noopener" target="_blank">Kaggle</a> in .txt format.
                     </p>
+                    <h3>Applying AI Technology from Microsoft</h3>
+                    <p>
+                        The current iteration of Ye Say takes advantage of Microsoft's pretrained <a href="https://huggingface.co/microsoft/DialoGPT-small" rel="noreferrer noopener" target="_blank">DialoGPT</a> conversational AI model to provide contextual responses to user queries. It is important to note that responses aren't actual Kanye West quotes, but are generated from the lyric dataset.
+                    </p>
                     <p>
                         We followed this <a href="https://www.freecodecamp.org/news/discord-ai-chatbot/#:~:text=How%20to%20Build%20the%20Discord,API%20token%20for%20later%20use." rel="noreferrer noopener" target="_blank">tutorial</a> and the attached Google Colab notebook to build the bot and train the AI model. The Colab notebook only reads .csv files, so I coded a program to convert our .txt file into the proper format, which presented some problems. The full dataset required more RAM to train than could be allotted by Colab, which meant that our dataset had to be compressed. 
                     </p>
                     <p>
-                        We coded a program to remove duplicate verses and certain words from the .txt file (the latter portion only worked to a certain extent) in an attempt to reduce the file size.
+                        We coded a program to remove duplicate verses and certain words from the .txt file (the latter portion only worked to a certain extent) in an attempt to reduce the file size. By removing duplicate lines, and lines containing characters like brackets, we were able to reduce the file to under 6000 lines of data. Even so, the Colab notebook's RAM limitations were still a roadblock and we had to cut and paste the first 800 verses in the dataset into a new .csv file. 
                     </p>
-                    <p>
-                        The current iteration of Ye Say takes advantage of Microsoft's pretrained <a href="https://huggingface.co/microsoft/DialoGPT-small" rel="noreferrer noopener" target="_blank">DialoGPT</a> conversational AI model to provide contextual responses to user queries. It is important to note that responses aren't actual Kanye West quotes, but are generated from the lyric dataset.
-                    </p>
+
                     <p>
                         Our trained Kanye AI model is available for download, but beware, it says some really out-of-pocket things from time to time. We originally intended to host it on <a href="https://repl.it" rel="noreferrer noopener" target="_blank">repl.it</a>, but decided against it because of this. You can have limited interactions with the AI in Hugging Face's chat window.
                     </p>
