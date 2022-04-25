@@ -275,13 +275,12 @@ header li {
 .header-cta .material-icons {
     vertical-align: middle;
 }
-.header-cta a,
-.header-nav-menu a {
-    color:inherit;
+.header-cta a {
+    color:rgb(var(--color-text-light));
 }
 header.color-change .header-cta a, 
-header.color-change .header-nav-menu a {
-    color: inherit;
+.header-nav-menu a {
+    color: rgb(var(--color-accent-primary));
 }
 .header-nav-menu {
     max-height: 0;
