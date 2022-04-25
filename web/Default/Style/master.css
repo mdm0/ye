@@ -166,7 +166,7 @@ main a {
     border-radius: 0.5em;
 }
 .cta-body:hover {
-    background-color: rgba(var(--color-accent-secondary), 0.125);
+    background-color: rgba(var(--color-accent-secondary), 0.25);
 }
 hr {
     border-top: none;
@@ -466,11 +466,15 @@ main .content-container {
     border-radius: 0.25em;
     bottom: -100%;
     padding: 1em;
-    transition: background 0.3s;
+    transition: background 0.3s, border-radius 0.3s;
+}
+.accordion-toggle:hover::after {
+    background-color: rgba(var(--color-accent-secondary), 0.25);
 }
 .accordion-toggle.active:after {
     content: '-';
     background-color: rgba(var(--color-accent-secondary), 0.25);
+    border-radius: 50%;
 }
 .accordion-content {
     max-height: 0;
