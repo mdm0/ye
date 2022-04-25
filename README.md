@@ -10,6 +10,9 @@ I have also been using W3Schools' [CSS accordion](https://www.w3schools.com/w3cs
 ### Product Demo
 [YouTube](https://youtu.be/1pk1clD71qo)
 
+### Final Thoughts
+Read about what myself (Michael) and Abby learned- and our process- throughout making Ye Say [here](https://yesay.netlify.app/ai.html). 
+
 ## DialoGPT Model for Ye
 [Hosted on HuggingFace](https://huggingface.co/mdm/DialoGPT-small-Kanye?text=pete+texting+kim)
 
