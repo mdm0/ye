@@ -312,6 +312,7 @@ header.color-change .header-cta a,
     display: block;
     line-height: 2.25em;
     margin: 0;
+    border-color: rgba(var(--color-accent-primary), 0.125) !important;
 }
 .nav-toggle-container {
     height: var(--height-header);
