@@ -3,6 +3,8 @@ Experience enlightenment. On demand.
 
 ## Website
 GitHub Pages via [Netlify](https://yesay.netlify.app/)
+### Product Demo
+[YouTube](https://youtu.be/1pk1clD71qo)
 
 ## DialoGPT Model for Ye
 [Hosted on HuggingFace](https://huggingface.co/mdm/DialoGPT-small-Kanye?text=pete+texting+kim)
