@@ -3,7 +3,10 @@ Experience enlightenment. On demand.
 
 ## Website
 GitHub Pages via [Netlify](https://yesay.netlify.app/)
+
 #### Web Resources
+Fonts and icons provided by [Google](https://fonts.google.com)  
+[JQuery](https://jquery.com) Library  
 [Stack Overflow](https://stackoverflow.com/questions/32704795/change-css-when-user-scroll-past-or-below-a-specific-div)  
 I have also been using W3Schools' [CSS accordion](https://www.w3schools.com/w3css/w3css_accordions.asp) for approximately four years.
 
