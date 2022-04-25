@@ -237,6 +237,10 @@ header a, .footer-links a {
     text-transform: lowercase;
     font-family: var(--font-accent);
     font-size: 1.75em;
+    transition: color 0.3s;
+}
+.site-title:hover {
+    color: rgb(var(--color-accent-secondary));
 }
 .site-title sup {
     border-radius: 0.25em;
@@ -263,7 +267,7 @@ header li {
     vertical-align: middle;
 }
 .header-cta:hover {
-    background-color: rgba(var(--color-accent-secondary), 0.125);
+    background-color: rgba(var(--color-accent-secondary), 0.25);
 }
 .header-cta:not(:first-child) {
     border-left: none;
@@ -273,11 +277,11 @@ header li {
 }
 .header-cta a,
 .header-nav-menu a {
-    color: rgb(var(--color-text-light));
+    color:inherit;
 }
 header.color-change .header-cta a, 
 header.color-change .header-nav-menu a {
-    color: rgb(var(--color-accent-primary));
+    color: inherit;
 }
 .header-nav-menu {
     max-height: 0;
@@ -290,14 +294,13 @@ header.color-change .header-nav-menu a {
     right: 7.5%;
     transition: max-height 0.3s ease-out, opacity 0.3s, background 0.3s;
     opacity: 0;
-    background-color: rgb(var(--color-accent-primary));
+    background-color: rgb(var(--color-text-light));
+    color: rgb(var(--color-accent-primary));
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     border-radius: 0.5em;
     text-align: right;
 }
-header.color-change .header-nav-menu {
-    background-color: rgb(var(--color-text-light));
-}
+
 .header-nav-menu a:hover,
 .footer-links a:hover {
     text-decoration: underline;
@@ -335,7 +338,7 @@ header.color-change .header-nav-menu {
 }
 .nav-toggle:hover,
 .nav-toggle.active {
-    background-color: rgba(var(--color-accent-secondary), 0.125);
+    background-color: rgba(var(--color-accent-secondary), 0.25);
 }
 span.open-nav {
     display: block;
@@ -350,6 +353,9 @@ span.close-nav {
     display: block;
 }
 /*Page Content*/
+main {
+    min-height: 100vh;
+}
 main .content-container {
     border-color: rgb(var(--color-accent-primary));
 }

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Ye Say | Ye's Brain</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Default/Style/master.css">
+        <!--Google Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <script src="Default/Script/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-to-main">Skip to Main Content</a>
+        <noscript>
+            <div class="content-block no-padding">
+                JavaScript is disabled in your browser. Enable it to ensure the best experience on this site.
+            </div>
+        </noscript>
+        <header class="static" id="navbar-main">
+            <div class="header-content" role="navigation">
+                <div class="header-section left">
+                    <ul>
+                        <li class="header-cta" role="button">
+                            <a href="https://github.com/mdm0/ye" target="_blank" rel="noreferrer noopener">Get Ye Say</a>
+                        </li>
+                        <li class="header-cta" role="button">
+                            <a href="https://www.lwv.org/blog/how-judge-candidate" target="_blank" rel="noreferrer noopener" >#KANYE2024</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-section center">
+                    <a class="site-title" href="index.html">Ye Say</a>
+                </div>
+                <div class="header-section right">
+                    <nav>
+                        <ul>
+                            <li class="nav-toggle-container">
+                                <button class="nav-toggle">
+                                    <span class="material-symbols-outlined open-nav">menu</span>
+                                    <span class="material-symbols-outlined close-nav">close</span>
+                                    <span hidden>Toggle Site Navigation</span>
+                                </button>
+                                <div class="header-nav-menu">
+                                    <div class="header-nav-inner">
+                                        <ul>
+                                            <li><a href="index.html#about">About</a></li>
+                                            <li><a href="index.html#faq">FAQs</a></li>
+                                            <li><a href="ai.html">AI</a></li>
+                                            <li>
+                                                <a href="https://github.com/mdm0/ye" target="_blank" rel="noreferrer noopener">GitHub</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://discord.gg/MuXstRTMpa" target="_blank" rel="noreferrer noopener">
+                                                    Discord Server
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.lwv.org/blog/how-judge-candidate" target="_blank" rel="noreferrer noopener" >
+                                                    #KANYE2024
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="header-spacer"></div>
+        <div id="header-trigger"></div>
+        <main id="main-content">
+            <div class="content-container">
+                <div class="content-block center">
+                    <h1 class="big-text">Ye's Brain</h1>
+                    <p>Explore the inner workings of Ye Say and the resources that we used in its development.</p>
+                    <img class="img-main" src="Assets/Images/ye_say/iPhone_mockup/ye_say_mockup-banner_iphonesewhite_portrait.png" alt="Ye Say on the iPhone">
+                </div>
+                <div class="content-block">
+                    <p>
+                        Allan Hamilton famously wrote that no one accomplishes anything alone. This especially rang true when Abby and I created Ye Say. Neither of us have worked with Discord's API or have experience in AI development. What started as a joke may have evolved into our computer science professor's biggest "shaking my head" moment of 2022.
+                    </p>
+                    <p>
+                        To our knowledge, Ye Say is the best way to have a conversation with Kanye West, without actually having a conversation with Kanye West.
+                    </p>
+                    <h2>Version <span class="accent">1.0</span></h2>
+                    <p>
+                        The first version of Ye Say is a mish-mash of primitive code writted by myself and Abby and big-brain code from this <a href="https://www.freecodecamp.org/news/create-a-discord-bot-with-python/" rel="noreferrer noopener" target="_blank">tutorial</a>. The program reads data from .csv files that we cobbled together by manual entry to keep the program (relatively) tame. I handled Tweets, while Abby took on lyrics. This was tedious, but the result is amusing.
+                    </p>
+                    <p>
+                        Ye Say 1.0 is dumb. With the exception of a couple of keywords, like 'Pete Davidson', 'Kim', or 'Taylor Swift', the program uses Python's baked-in random function to generate responses from the data that we provided.
+                    </p>
+                    <h2>Version <span class="accent">2.0</span></h2>
+                    <p>
+                        Ye Say 2.0 came to be when somebody suggested that we explore using artificial intelligence to give Ye Say the power to generate "real" responses to user input. The dataset used here was found on <a href="https://www.kaggle.com/datasets/convolutionalnn/kanye-west-lyrics-dataset" rel="noreferrer noopener" target="_blank">Kaggle</a> in .txt format.
+                    </p>
+                    <p>
+                        We followed this <a href="https://www.freecodecamp.org/news/discord-ai-chatbot/#:~:text=How%20to%20Build%20the%20Discord,API%20token%20for%20later%20use." rel="noreferrer noopener" target="_blank">tutorial</a> and the attached Google Colab notebook to build the bot and train the AI model. The Colab notebook only reads .csv files, so I coded a program to convert our .txt file into the proper format, which presented some problems. The full dataset required more RAM to train than could be allotted by Colab, which meant that our dataset had to be compressed. 
+                    </p>
+                    <p>
+                        We coded a program to remove duplicate verses and certain words from the .txt file (the latter portion only worked to a certain extent) in an attempt to reduce the file size.
+                    </p>
+                    <p>
+                        The current iteration of Ye Say takes advantage of Microsoft's pretrained <a href="https://huggingface.co/microsoft/DialoGPT-small" rel="noreferrer noopener" target="_blank">DialoGPT</a> conversational AI model to provide contextual responses to user queries. It is important to note that responses aren't actual Kanye West quotes, but are generated from the lyric dataset.
+                    </p>
+                    <p>
+                        Our trained Kanye AI model is available for download, but beware, it says some really out-of-pocket things from time to time. We originally intended to host it on <a href="https://repl.it" rel="noreferrer noopener" target="_blank">repl.it</a>, but decided against it because of this. You can have limited interactions with the AI in Hugging Face's chat window.
+                    </p>
+                    <h2>Downloads</h2>
+                    <a class="cta-body" rel="noreferrer noopener" target="_blank" href="https://huggingface.co/mdm/DialoGPT-small-Kanye">
+                        Get Ye's Brain
+                    </a>
+                    <a class="cta-body" rel="noreferrer noopener" target="_blank" href="https://github.com/mdm0/ye">Github</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <div class="content-block no-padding">
+                    <div class="grid-container two-columns flex-display">
+                        <div>
+                            <menu>
+                                <ul class="footer-links">
+                                    <li><a href="index.html#about">About</a></li>
+                                    <li><a href="index.html#faq">FAQs</a></li>
+                                    <li><a href="ai.html">AI</a></li>
+                                    <li>
+                                        <a href="https://github.com/mdm0/ye" target="_blank" rel="noreferrer noopener">GitHub</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://discord.gg/MuXstRTMpa" target="_blank" rel="noreferrer noopener">
+                                            Discord Server
+                                        </a>
+                                    </li>
+                                </ul>
+                            </menu>
+                        </div>
+                        <div class="desktop-right">
+                            <a class="site-title" href="index.html">
+                                Ye Say
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="Default/Script/master.js"></script>
+    </body>
+</html>
