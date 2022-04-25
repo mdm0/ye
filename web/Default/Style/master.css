@@ -529,6 +529,12 @@ footer menu {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+.yt-embed {
+    display: block;
+    margin: 0 auto;
+    width: 65%;
+    height: 350px;
+}
 @media only screen and (max-width: 1024px) {
     body {
         /*Global Variables*/
